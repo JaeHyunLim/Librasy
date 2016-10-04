@@ -16,5 +16,6 @@ int main()
 		printf("%d");
 		printf("xx");
 		printf("%d", a);
+		printf("馬馬馬馬馬馬\n");
 	}
 }
