@@ -9,6 +9,7 @@ void reverse2(double *start, double *end);
 int main()
 {
 	int b = 1;
+	int ab;
 	int a = 0;
 	if(a?b:1)
 	{
@@ -17,5 +18,6 @@ int main()
 		printf("xx");
 		printf("%d", a);
 		printf("馬馬馬馬馬馬\n");
+		printf("conflct");
 	}
 }
