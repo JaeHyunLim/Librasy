@@ -12,6 +12,7 @@ int main()
 	int a = 0;
 	if(a?b:1)
 	{
+		printf("jeahyun is bad boy");
 		printf("%d");
 		printf("xx");
 	}
