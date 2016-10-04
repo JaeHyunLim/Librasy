@@ -15,5 +15,6 @@ int main()
 		printf("jeahyun is nice boy");
 		printf("%d");
 		printf("xx");
+		printf("%d", a);
 	}
 }
