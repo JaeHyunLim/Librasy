@@ -31,18 +31,9 @@ public class SubPage01 extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     public SubPage01() {
-        // Required empty public constructor
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SubPage01.
-     */
-    // TODO: Rename and change types and number of parameters
     public static SubPage01 newInstance(String param1, String param2) {
         SubPage01 fragment = new SubPage01();
         Bundle args = new Bundle();
