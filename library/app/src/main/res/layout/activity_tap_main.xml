@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.example.sungmin.library.TapMainActivity">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/view1"
 
-    <Button
-        android:text="첫번째 버튼"
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:text="첫번째 탭 화면" />
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/view2"
 
+        android:text="두번째 탭 화면" />
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/view3"
 
-    <include layout="@layout/content_tap_main" />
-
-</android.support.design.widget.CoordinatorLayout>
+        android:text="세번째 탭 화면" />
+</FrameLayout>
