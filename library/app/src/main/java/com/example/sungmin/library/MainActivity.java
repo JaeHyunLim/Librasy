@@ -1,4 +1,4 @@
-package com.example.sungmin.library.;
+package com.example.sungmin.library;
 
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class TapMainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -38,6 +38,7 @@ public class TapMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -114,8 +115,8 @@ public class TapMainActivity extends AppCompatActivity {
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        {
             if(getArguments().getInt(ARG_SECTION_NUMBER)==1)
             {
                 View rootView = inflater.inflate(R.layout.fragment_sub_page01, container, false);
@@ -126,11 +127,14 @@ public class TapMainActivity extends AppCompatActivity {
                 View rootView = inflater.inflate(R.layout.fragment_sub_page02, container, false);
                 return rootView;
             }
+            if(getArguments().getInt(ARG_SECTION_NUMBER)==3)
+            {
+                View rootView = inflater.inflate(R.layout.fragment_sub_page03, container, false);
+                return rootView;
+            }
             else
             {
                 View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-                TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-                textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
                 return rootView;
             }
         }
@@ -155,19 +159,21 @@ public class TapMainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 4 total pages.
+            return 4;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Page 01";
+                    return "Search";
                 case 1:
-                    return "Page 02";
+                    return "Barcord";
                 case 2:
-                    return "SECTION 3";
+                    return "Mypage";
+                case 3:
+                    return "Setting";
             }
             return null;
         }
